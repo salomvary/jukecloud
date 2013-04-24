@@ -1,30 +1,170 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
+html {
+  margin: 0;
   padding: 0;
+  background: #fff;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
+  color: #333;
+}
+
+body {
+  padding: 0 40px;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+a {
+  color: #06c;
+}
+
+.alert {
+  background: rgba(255, 102, 0, 0.4);
+  padding: 10px 14px;
+}
+
+input[type=text],
+input[type=url] {
+  border: 1px solid #999;
+  padding: 4px 6px;
+  font: inherit;
+  line-height: 22px;
+  margin: 2px;
+}
+
+input[type=text]:focus,
+input[type=url]:focus {
+  border-color: #333;
+  outline: 0;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  margin: 2px;
+  line-height: 24px;
+  padding: 4px 14px;
+  background: #e5e5e5;
+  text-align: center;
+}
+
+button:hover {
+  background: #999;
+}
+
+button:focus {
+  outline: 1px #333 dotted;
+}
+
+input:first-child,
+button:first-child {
+  margin-left: 0;
+}
+
+input:last-child,
+button:last-child {
+  margin-right: 0;
+}
+
+.inline-form {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+}
+
+.inline-form input {
+  -webkit-flex: 1 1 auto;
+}
+
+.inline-form button {
+  -webkit-flex: 0 1 auto;
+}
+
+.tracks {
+}
+
+.track {
+  margin: 10px 0;
+  background: #f60;
+  box-shadow: inset 0px 0px 1px #ffffcc;
+  padding: 10px 15px;
+  position: relative;
+  min-height: 100px;
+}
+
+.track:hover,
+.track:focus {
+  outline: 3px #333 solid;
+}
+
+.track.playing {
+  border: 4px #06c solid;
+}
+
+.track.playing {
+  padding: 6px 11px;
+}
+
+.track .close {
+  display: none;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 32px;
+}
+
+.track:hover .close {
+  display: block;
+}
+
+.track h2,
+.track h3 {
+  color: #f2f2f2;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.track h2 {
+  font-size: 16px;
+}
+
+.track h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.track .controls {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+}
+
+.track .controls .progress {
+  margin-left: 10px;
+  -webkit-flex: 1 0 auto;
+}
+
+.track .controls button {
+  -webkit-flex: 0 1 auto;
+  margin: 0;
+}
+
+.play-button {
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0;
+  line-height: 32px;
+  width: 34px;
+  background: transparent;
+}
+
+.play-button:hover {
+  background: #fff;
+  color: #f60;
+}
+
+.track .progress {
+}
+.track .progress div {
+  height: 20px;
+  background: #06c;
 }

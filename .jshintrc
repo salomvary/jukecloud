@@ -1,0 +1,10 @@
+{
+  "browser": true,
+  "laxbreak": true,
+  "devel": true,
+  "asi": true,
+  "globalstrict": true,
+	"globals": {
+		"angular": true
+	}
+}
